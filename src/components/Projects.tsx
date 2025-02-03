@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { Github } from "lucide-react";
 
 const projects = [
   {
     title: "KellerApp",
     description: "A hackathon-winning project built with Python, Streamlit, MediaPipe, and Groq AI to convert English text, speech, and gestures into British Sign Language.",
-    link: "https://dorahacks.io/buidl/21663/",
+    link: "https://github.com/stefan-vlajich/KellerApp.git",
     tags: ["Python", "Streamlit", "MediaPipe", "Groq AI"],
   },
   {
@@ -75,20 +76,8 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center text-slate-600 hover:text-slate-900 transition-colors"
                 >
+                  <Github className="mr-2 h-4 w-4" />
                   View Project
-                  <svg
-                    className="ml-2 w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
                 </a>
               </motion.div>
             ))}
