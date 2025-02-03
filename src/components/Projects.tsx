@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
     title: "KellerApp",
     description: "A hackathon-winning project built with Python, Streamlit, MediaPipe, and Groq AI to convert English text, speech, and gestures into British Sign Language.",
     link: "https://github.com/stefan-vlajich/KellerApp.git",
+    demoLink: "https://dorahacks.io/buidl/21663/",
     tags: ["Python", "Streamlit", "MediaPipe", "Groq AI"],
   },
   {
@@ -56,10 +57,10 @@ const Projects = () => {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-lg shadow-sm border border-slate-100 hover:border-slate-200 transition-colors"
               >
-                <h3 className="text-xl font-semibold text-slate-900">
+                <h3 className="text-xl font-semibold text-slate-800">
                   {project.title}
                 </h3>
-                <p className="mt-2 text-slate-600">{project.description}</p>
+                <p className="mt-2 text-slate-700">{project.description}</p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <span
@@ -70,15 +71,28 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  <Github className="mr-2 h-4 w-4" />
-                  View Project
-                </a>
+                <div className="mt-4 flex gap-4">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-slate-700 hover:text-slate-900 transition-colors"
+                  >
+                    <Github className="mr-2 h-4 w-4" />
+                    View Project
+                  </a>
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-slate-700 hover:text-slate-900 transition-colors"
+                    >
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      View Demo
+                    </a>
+                  )}
+                </div>
               </motion.div>
             ))}
           </div>
