@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -43,7 +44,7 @@ const Hero = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="px-8 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+              className="px-8 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors cursor-pointer"
             >
               Get in touch
             </Link>
@@ -51,7 +52,7 @@ const Hero = () => {
               to="projects"
               smooth={true}
               duration={500}
-              className="px-8 py-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors"
+              className="px-8 py-3 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors cursor-pointer"
             >
               View projects
             </Link>
